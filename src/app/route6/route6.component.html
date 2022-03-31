@@ -1,0 +1,7 @@
+<div class="grid">
+  <div *ngFor="let dv of divArray">
+    <button class="btn" [value]="dv.id" (click)="displayDivNumber($event)">
+      Click Me 😉
+    </button>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="route-2">
+  <header class="cost-filter">
+    <div class="view-style">
+      <button (click)="this.isGridViewSelected = true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+          />
+        </svg>
+      </button>
+      <button (click)="this.isGridViewSelected = false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <div>
+      <label for="priceFilter">Sort : </label>
+      <select name="priceFilter" id="price" (change)="filterResult($event)">
+        <option value="Select">Select Filter</option>
+        <option value="L2H">Price -- Low to High</option>
+        <option value="H2L">Price -- High to Low</option>
+      </select>
+    </div>
+  </header>
+  <div
+    class="veg-grid-view"
+    [ngClass]="isGridViewSelected ? 'veg-grid-view' : 'veg-list-view'"
+  >
+    <div class="veggies" *ngFor="let veg of vegetablesList">
+      <img src="{{ veg.image }}" alt="veg.tname" />
+      <b>{{ veg.tname }}</b>
+      <p>&#8377;{{ veg.price }}</p>
+    </div>
+  </div>
+</div>

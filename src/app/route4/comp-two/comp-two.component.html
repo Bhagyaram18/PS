@@ -1,0 +1,32 @@
+<div class="comp-two">
+  <div>
+    <label for="timerInput">Enter Timer Limit :</label>
+    <input
+      type="number"
+      min="0"
+      name="timerInput"
+      id="timer"
+      [(ngModel)]="timerStart"
+      (change)="inputChanged($event)"
+    />
+  </div>
+  <div>
+    <button
+      class="start-pause"
+      (click)="startPauseTimer()"
+      [disabled]="timerStart === null"
+    >
+      Start/Pause
+    </button>
+    <button
+      class="reset"
+      (click)="resetTimer()"
+      [disabled]="timerStart === null"
+    >
+      Reset
+    </button>
+  </div>
+  <div class="pt-div">
+    <div *ngFor="let item of pausedTimeArray">{{ item }}</div>
+  </div>
+</div>

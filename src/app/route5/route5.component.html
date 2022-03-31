@@ -1,0 +1,22 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th><span (click)="sortTable('Name')">Name</span></th>
+        <th><span (click)="sortTable('Class')">Class</span></th>
+        <th><span (click)="sortTable('Section')">Section</span></th>
+        <th><span (click)="sortTable('Sub1')">Subject-1</span></th>
+        <th><span (click)="sortTable('Sub2')">Subject-2</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentData">
+        <td>{{ student.Name }}</td>
+        <td>{{ student.Class }}</td>
+        <td>{{ student.Section }}</td>
+        <td>{{ student.Subject1 }}</td>
+        <td>{{ student.Subject2 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>

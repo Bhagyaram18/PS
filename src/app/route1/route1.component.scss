@@ -1,0 +1,152 @@
+.main-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  height: 70vh;
+  width: 100%;
+}
+.route1 {
+  border: 3px solid black;
+  height: 75%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floater {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.red,
+.blue,
+.yellow,
+.orange {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+
+  animation-name: reds;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes reds {
+  0% {
+    left: 0;
+  }
+  24% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  75% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.blue {
+  background-color: blue;
+
+  animation-name: blues;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blues {
+  0% {
+    left: 100%;
+  }
+  24% {
+    left: 100%;
+  }
+  25% {
+    left: 0;
+  }
+  49% {
+    left: 0;
+  }
+
+  52% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.yellow {
+  background-color: yellow;
+
+  animation-name: yellows;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes yellows {
+  0% {
+    left: 100%;
+  }
+  49% {
+    left: 100%;
+  }
+  52% {
+    left: 0;
+  }
+  74% {
+    left: 0;
+  }
+
+  76% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.orange {
+  background-color: purple;
+
+  animation-name: oranges;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes oranges {
+  0% {
+    left: 100%;
+  }
+  74% {
+    left: 100%;
+  }
+  76% {
+    left: 0;
+  }
+  99% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}

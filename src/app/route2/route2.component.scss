@@ -1,0 +1,53 @@
+.route-2 {
+  padding: 0 30px;
+  margin: 30px auto;
+}
+.cost-filter {
+  height: 60px;
+  text-align: center;
+  margin-top: 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  margin-bottom: 10px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.veg-grid-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  .veggies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 16px;
+  }
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.veg-list-view {
+  grid-template-columns: 1fr 1fr;
+  .veggies:nth-child(even) {
+    justify-self: start;
+  }
+  .veggies:nth-child(odd) {
+    justify-self: end;
+  }
+}
+
+.btn {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

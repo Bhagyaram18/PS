@@ -1,0 +1,25 @@
+<div class="route-three">
+  <app-comp-one
+    (pausedTime)="pausedAt($event)"
+    [timer]="timer"
+    [isTimerCleared]="isTimerCleared"
+    [isStarted]="isStarted"
+    class="comp-one"
+  ></app-comp-one>
+  <app-comp-two
+    (updateTimer)="updateTimer($event)"
+    (clearTimer)="clearTimer($event)"
+    [pausedTime]="pausedTime"
+    class="comp-two"
+  ></app-comp-two>
+  <app-comp-three
+    [isStarted]="isStarted"
+    [isTimerCleared]="isTimerCleared"
+    class="comp-three"
+  ></app-comp-three>
+  <app-comp-four
+    [isStarted]="isStarted"
+    [isTimerCleared]="isTimerCleared"
+    class="comp-four"
+  ></app-comp-four>
+</div>

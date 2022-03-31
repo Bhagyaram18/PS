@@ -1,0 +1,42 @@
+.comp-two{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 200px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+label{
+    margin-right: 10px;
+}
+
+input{
+    padding: 5px;
+}
+
+.start-pause{
+    margin-right: 10px;
+}
+
+button{
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    transition: all 0.2s;
+}
+
+button:hover{
+    box-shadow: 0 0 36px rgba(128, 128, 128, 0.5) ;
+}
+
+.pt-div{
+    padding-right: 30px;
+    overflow-y: scroll;
+    height: 100px;
+    align-self: flex-start;
+}
